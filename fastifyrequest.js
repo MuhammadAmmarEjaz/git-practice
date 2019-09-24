@@ -16,7 +16,7 @@ fastify.get('/', async (request, reply) => {
     method: 'GET',
     "rejectUnauthorized": false,
     uri: `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&APPID=${APIKEY}`,
-    json: false // Automatically stringifies the body to JSON
+    json: true // Automatically stringifies the body to JSON
 };
   fastify.get('/weatherapi',async (request,reply) => {
     const data = await rp(options);
