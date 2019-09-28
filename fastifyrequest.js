@@ -1,14 +1,12 @@
-const fastify=require('fastify')({logger:true});
+ const fastify=require('fastify')({logger:true});
 const rp = require('request-promise');
-// const proxy = fastify({
-//     logger: true
-//   })
 
-// Declare a route
-fastify.get('/', async (request, reply) => {
-    return { hello: 'world' }
-  })
 
+fastify.register(require('./our-db-connector'),{
+  url:'mongodb://localhost:27017/bykea-dev'
+})
+  
+ fastify.register(require('./routes'));
   let lat=35;
   let lng = 139
   const APIKEY="6394e6600a059532774210bddc8646a3"
