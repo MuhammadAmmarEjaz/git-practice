@@ -1,0 +1,10 @@
+{
+    "logSeverity" : "info",
+    "app": {
+        "externalAPITimeout": 5000
+    },
+    "url": {
+        "self": "http://localhost:9000",
+        "usersAPI": "https://reqres.in/api"
+    }
+}
