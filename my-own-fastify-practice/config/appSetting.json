@@ -6,5 +6,10 @@
     "url": {
         "self": "http://localhost:9000",
         "usersAPI": "https://reqres.in/api"
+    },
+    "db": {
+        "mongodb" : {
+            "uri" : "mongodb://localhost/node_api"
+        }
     }
 }
